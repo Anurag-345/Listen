@@ -11,7 +11,7 @@ const TopAlbumsContainer = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://api.napster.com/v2.2/albums/top?apikey=${NAPSTER_API_KEY}`
+        `https://api.napster.com/v2.2/albums/top?apikey=${NAPSTER_API_KEY}`
       );
       const data = await response.json();
       setAlbumList(data.albums);
