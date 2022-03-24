@@ -15,7 +15,7 @@ const SearchContainer = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `http://api.napster.com/v2.2/search?apikey=${NAPSTER_API_KEY}&per_type_limit=5&query=${query}`
+        `https://api.napster.com/v2.2/search?apikey=${NAPSTER_API_KEY}&per_type_limit=5&query=${query}`
       );
       const data = await response.json();
       const search_result = data.search.data;
