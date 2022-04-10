@@ -1,10 +1,8 @@
 import React, {  useState } from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import TopNav from "./components/TopNav";
 import PlayerContainer from "./components/PlayerContainer";
 import MainContainer from "./components/MainContainer";
-import SideNav from "./components/SideNav";
 import TopArtistContainer from "./components/TopArtistContainer";
 import { Routes, Route } from "react-router-dom";
 import ArtistPage from "./components/ArtistPage";
