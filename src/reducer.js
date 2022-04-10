@@ -9,7 +9,6 @@ const initiaState = {
 
 const reducer = (currentState = initiaState, action) => {
     const newState = { ...currentState };
-
     switch(action.type) {
         case SET_PLAY_NOW:
             newState.currently_playing = action.payload;

@@ -15,6 +15,7 @@ import SearchContainer from "./components/SearchContainer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import FavouriteListContainer from "./components/FavouriteListContainer";
 import PlaylistContainer from "./components/PlaylistContainer";
+import ResponsiveDrawer from './components/respTopNav';
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -49,8 +50,9 @@ const App = () => {
         <Box sx={{ pb: 7 }}>
           <Box sx={{ display: "flex" }}>
             <CssBaseline />
-            <TopNav updateTheme={updateTheme} />
-            <SideNav />
+            <ResponsiveDrawer updateTheme={updateTheme} />
+            {/* <TopNav  /> */}
+            {/* <SideNav /> */}
             <Box sx={{ mb: 8, width: 1 }}>
               <Routes>
                 <Route path="/" element={<MainContainer />} />

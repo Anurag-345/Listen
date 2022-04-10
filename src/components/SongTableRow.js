@@ -49,8 +49,9 @@ const SongTableRow = (props) => {
   return (
     <TableRow
       hover
-      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
       selected={isPlaying}
+      onClick={playSong}
+      
     >
       <TableCell component="th" scope="row">
         {props.index + 1}.
@@ -58,21 +59,55 @@ const SongTableRow = (props) => {
       <TableCell>
         <Stack direction="row" alignItems="center" spacing={2}>
           {props.owner !== "album" ? (
-            <img style={{ width: "3rem", height: "3rem" }} src={image_url} alt="img" />
+            <img
+              style={{ width: "3rem", height: "3rem" }}
+              src={image_url}
+              alt="img"
+            />
           ) : (
             false
           )}
-          <Typography variant="h6">{props.data?.name}</Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              "@media (max-width:600px)": {
+                fontSize: "1rem",
+              },
+            }}
+          >
+            {props.data?.name}
+          </Typography>
         </Stack>
       </TableCell>
       <TableCell>
         {props.owner === "artist" ? (
-          <Link to={`/albums/${props.data?.albumId}`}>
-            <Typography variant="h6">{props.data?.albumName}</Typography>
+          <Link
+            to={`/albums/${props.data?.albumId}`}
+            style={{ textDecoration: "none", color: "blue" }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                "@media (max-width:600px)": {
+                  fontSize: "1rem",
+                },
+              }}
+            >
+              {props.data?.albumName}
+            </Typography>
           </Link>
         ) : (
           <Link to={`/artists/${props.data?.artistId}`}>
-            <Typography variant="h6">{props.data?.artistName}</Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                "@media (max-width:600px)": {
+                  fontSize: "1rem",
+                },
+              }}
+            >
+              {props.data?.artistName}
+            </Typography>
           </Link>
         )}
       </TableCell>

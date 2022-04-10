@@ -43,31 +43,69 @@ const ArtistPage = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Stack direction="row" spacing={10}>
+      <Stack direction="row" spacing={5}>
         <Paper
           elevation={12}
-          style={{
-            width: "31vw",
-            height: "20vw",
+          sx={{
+            width: "100%",
+            height: "50vh",
             backgroundImage: `url('${image_url}')`,
             backgroundSize: "cover",
+            "@media (max-width:600px)": {
+              width: "100%",
+              height: "8em",
+            },
           }}
         />
-        <Typography variant="h2" sx={{ pt: 4 }}>
-          {artistDetails?.name}
-        </Typography>
+        <Box>
+          <Typography
+            variant="h2"
+            sx={{
+              pt: 4,
+              "@media (max-width:600px)": {
+                fontSize: "2rem",
+              },
+            }}
+          >
+            {artistDetails?.name}
+          </Typography>
+        </Box>
       </Stack>
 
       <TableContainer component={Paper} sx={{ mt: 12 }}>
-        <Table size="small" sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table
+          size="small"
+          sx={{ minWidth: "100px" }}
+          aria-label="simple table"
+        >
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>
               <TableCell>
-                <Typography variant="h6">Name</Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontSize: "2rem",
+                    "@media (max-width:600px)": {
+                      fontSize: "rem",
+                    },
+                  }}
+                >
+                  Name
+                </Typography>
               </TableCell>
               <TableCell>
-                <Typography variant="h6">Album</Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontSize: "2rem",
+                    "@media (max-width:600px)": {
+                      fontSize: "rem",
+                    },
+                  }}
+                >
+                  Album
+                </Typography>
               </TableCell>
               <TableCell></TableCell>
             </TableRow>

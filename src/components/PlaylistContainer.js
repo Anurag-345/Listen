@@ -24,7 +24,7 @@ const PlaylistContainer = () => {
       <Typography variant="h3">Playing Queue:</Typography>
 
       <TableContainer component={Paper} sx={{ mt: 6 }}>
-        <Table sx={{ minWidth: 650 }} size="small" aria-label="simple table">
+        <Table sx={{ width: 400 }} size="small" aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>

@@ -14,7 +14,7 @@ const AlbumCard = (props) => {
   };
 
   return (
-    <Grid item xs={2} onClick={navigate_fn}>
+    <Grid item xs={2} onClick={navigate_fn} >
       <Paper
         elevation={3}
         sx={[
@@ -22,10 +22,14 @@ const AlbumCard = (props) => {
           { "&:hover": { backgroundColor: "grey" } },
         ]}
       >
-        <Stack justifyContent="space-between" spacing={3} sx={{}}>
+        <Stack
+          justifyContent="space-between"
+          spacing={3}
+          sx={{}}
+        >
           <img src={image_url} alt="img" />
           <Typography sx={{ textAlign: "center", justifyContent: "center" }}>
-            {props.data?.name.slice(0, 22)}
+            {props.data?.name.slice(0,22)}
           </Typography>
         </Stack>
       </Paper>

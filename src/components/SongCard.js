@@ -15,7 +15,7 @@ const SongCard = (props) => {
   };
 
   return (
-    <Grid item xs={2} onClick={changeSong}>
+    <Grid item xs={2} onClick={changeSong} >
       <Paper
         elevation={3}
         sx={[

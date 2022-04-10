@@ -23,9 +23,8 @@ const TopArtistContainer = () => {
       <Toolbar />
       <Grid
         container
-        rowSpacing={3}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        alignItems="stretch"
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {artistList.map((single_artist, idx) => {
           return <ArtistCard data={single_artist} key={idx} />;

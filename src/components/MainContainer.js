@@ -23,9 +23,8 @@ const MainContainer = () => {
       <Toolbar />
       <Grid
         container
-        rowSpacing={3}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        alignItems="stretch"
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {songsList.map((single_song, idx) => {
           return <SongCard data={single_song} key={idx} />;

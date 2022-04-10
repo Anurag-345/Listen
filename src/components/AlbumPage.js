@@ -73,7 +73,16 @@ const AlbumPage = () => {
           </Fab>
         </Paper>
         <Stack direction="column" spacing={4}>
-          <Typography variant="h2" sx={{ pt: 4 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              pt: 4,
+              fontSize: "4em",
+              "@media (max-width:600px)": {
+                fontSize: "2rem",
+              },
+            }}
+          >
             {albumDetails?.name}
           </Typography>
           <Typography variant="h3">
@@ -83,6 +92,12 @@ const AlbumPage = () => {
               <Link
                 to={`/artists/${albumDetails?.contributingArtists?.primaryArtist}`}
                 style={{ textDecoration: "none" }}
+                sx={{
+                  fontSize: "4em",
+                  "@media (max-width:600px)": {
+                    fontSize: "1rem",
+                  },
+                }}
               >
                 {albumDetails?.artistName}
               </Link>
@@ -98,7 +113,7 @@ const AlbumPage = () => {
       </Stack>
 
       <TableContainer component={Paper} sx={{ mt: 12 }}>
-        <Table size="small" sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table size="small" sx={{ minWidth: 200 }} aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>

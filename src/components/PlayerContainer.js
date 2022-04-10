@@ -1,5 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Paper, Stack, Box, Slider, Fab, IconButton } from "@mui/material";
+import {
+  Paper,
+  Stack,
+  Box,
+  Slider,
+  Fab,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import {
   makeFavourite,
@@ -19,7 +27,6 @@ import RepeatIcon from "@mui/icons-material/Repeat";
 import RepeatOnIcon from "@mui/icons-material/RepeatOn";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 
-
 const PlayerContainer = () => {
   const [volume, setVolume] = useState(50);
   const [playTime, setPlayTime] = useState(0);
@@ -29,10 +36,12 @@ const PlayerContainer = () => {
   const dispatch = useDispatch();
 
   const appState = useSelector((state) => state);
-  
+
   let image_url = "";
-  if(appState?.currently_playing.albumId !== undefined){
+  let song_name;
+  if (appState?.currently_playing.albumId !== undefined) {
     image_url = `https://api.napster.com/imageserver/v2/albums/${appState?.currently_playing.albumId}/images/200x200.jpg`;
+    song_name = appState?.currently_playing.name;
   }
 
   useEffect(() => {
@@ -40,12 +49,11 @@ const PlayerContainer = () => {
   }, [volume]);
 
   useEffect(() => {
-    if(audioPlayer.current.src !== ''){
+    if (audioPlayer.current.src !== "") {
       setPlayTime(0);
       audioPlayer.current.play();
       setPlaying(true);
     }
-    
   }, [appState.currently_playing]);
 
   const changeVolume = (_, volume) => {
@@ -104,6 +112,15 @@ const PlayerContainer = () => {
     }
   };
 
+  const controlButtonsTheme = {
+    fontSize: "1.5rem",
+
+    "@media (max-width:600px)": {
+      fontSize: "1rem",
+      // display: "none",
+    },
+  };
+
   return (
     <Paper
       sx={{
@@ -130,9 +147,9 @@ const PlayerContainer = () => {
         max={30}
         onChange={changePlayTime}
         sx={{
-          mt: -4,
+          mt: -3,
           color: "light" === "dark" ? "#fff" : "rgba(0,0,0,0.87)",
-          height: 4,
+          height: 6,
           "& .MuiSlider-thumb": {
             width: 8,
             height: 8,
@@ -163,44 +180,106 @@ const PlayerContainer = () => {
         justifyContent="space-between"
         alignItems="center"
       >
-      
-          <img height="75" src={image_url} alt="" />
+        <Box
+          sx={{
+            width: "45%",
+            height: "3em",
+            display: "flex",
+            // justifyContent: "center",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "2vw",
+            "@media (max-width:600px)": {
+              width: "40%",
+            },
+          }}
+        >
+          <img height="55vh" src={image_url} alt="" />
+          <Typography
+            varient="h6"
+            sx={{
+              fontSize: "1rem",
+              "@media (max-width:600px)": {
+                fontSize: "0.7rem",
+              },
+            }}
+          >
+            {song_name?.slice(0, 41)}
+          </Typography>
+        </Box>
 
-        <Box sx={{ pl: 18 }}>
-          <Stack direction="row" spacing={2} alignItems="center">
+        <Box
+          sx={{
+            pl: "auto",
+            width: "50%",
+            "@media (max-width:600px)": {
+              width: "60%",
+            },
+          }}
+        >
+          <Stack
+            direction="row"
+            alignItems="center"
+            sx={{
+              display: "flex",
+              fontSize: "1.5rem",
+              "@media (min-width:600px)": {
+                gap: "0",
+                fontSize: "2rem",
+              },
+            }}
+          >
             <IconButton aria-label="delete" onClick={toggleFavourite}>
               {appState.favourite_list[appState.currently_playing.id] ===
               undefined ? (
-                <FavoriteBorderIcon />
+                <FavoriteBorderIcon sx={controlButtonsTheme} />
               ) : (
-                <FavoriteIcon />
+                <FavoriteIcon sx={controlButtonsTheme} />
               )}
             </IconButton>
 
             <IconButton aria-label="delete" onClick={playPrevious}>
-              <SkipPreviousIcon fontSize="large" />
+              <SkipPreviousIcon sx={controlButtonsTheme} />
             </IconButton>
 
-            <Fab color="primary" aria-label="add" onClick={togglePlayPause}>
+            <Fab
+              color="primary"
+              aria-label="add"
+              onClick={togglePlayPause}
+              sx={{
+                margin: "0.5em",
+              }}
+            >
               {isPlaying ? (
-                <PauseIcon fontSize="large" />
+                <PauseIcon sx={{ fontSize: "2em" }} />
               ) : (
-                <PlayArrowIcon fontSize="large" />
+                <PlayArrowIcon sx={{ fontSize: "2em" }} />
               )}
             </Fab>
 
             <IconButton aria-label="delete" onClick={playNext}>
-              <SkipNextIcon fontSize="large" />
+              <SkipNextIcon sx={controlButtonsTheme} />
             </IconButton>
 
             <IconButton aria-label="delete" onClick={toggleRepeat}>
-              {isRepeat ? <RepeatOnIcon /> : <RepeatIcon />}
+              {isRepeat ? (
+                <RepeatOnIcon sx={controlButtonsTheme} />
+              ) : (
+                <RepeatIcon sx={controlButtonsTheme} />
+              )}
             </IconButton>
           </Stack>
         </Box>
 
-        <Box sx={{ width: "200px" }}>
-          <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+        <Box
+          sx={{
+            width: "10rem",
+            "@media (max-width:600px)": {
+              display: "none",
+            },
+          }}
+        >
+          <Stack direction="row" spacing={1} sx={{ mb: 1 }} alignItems="center">
             <VolumeDown />
             <Slider
               aria-label="Volume"
