@@ -204,7 +204,7 @@ const PlayerContainer = () => {
               },
             }}
           >
-            {song_name?.slice(0, 41)}
+            {song_name?.slice(0,15)}
           </Typography>
         </Box>
 
@@ -213,7 +213,7 @@ const PlayerContainer = () => {
             pl: "auto",
             width: "50%",
             "@media (max-width:600px)": {
-              width: "60%",
+              width: "70%",
             },
           }}
         >

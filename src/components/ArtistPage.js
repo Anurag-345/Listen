@@ -87,7 +87,7 @@ const ArtistPage = () => {
                   sx={{
                     fontSize: "2rem",
                     "@media (max-width:600px)": {
-                      fontSize: "rem",
+                      fontSize: "0.7rem",
                     },
                   }}
                 >
@@ -100,7 +100,7 @@ const ArtistPage = () => {
                   sx={{
                     fontSize: "2rem",
                     "@media (max-width:600px)": {
-                      fontSize: "rem",
+                      fontSize: "0.7rem",
                     },
                   }}
                 >

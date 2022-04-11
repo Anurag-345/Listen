@@ -71,7 +71,7 @@ const SongTableRow = (props) => {
             variant="h6"
             sx={{
               "@media (max-width:600px)": {
-                fontSize: "1rem",
+                fontSize: "0.7rem",
               },
             }}
           >
@@ -89,7 +89,7 @@ const SongTableRow = (props) => {
               variant="h6"
               sx={{
                 "@media (max-width:600px)": {
-                  fontSize: "1rem",
+                  fontSize: "0.7rem",
                 },
               }}
             >
@@ -102,7 +102,7 @@ const SongTableRow = (props) => {
               variant="h6"
               sx={{
                 "@media (max-width:600px)": {
-                  fontSize: "1rem",
+                  fontSize: "0.7rem",
                 },
               }}
             >

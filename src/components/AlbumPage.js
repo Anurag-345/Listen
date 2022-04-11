@@ -53,11 +53,11 @@ const AlbumPage = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Stack direction="row" spacing={10}>
+      <Stack direction="column" spacing={10}>
         <Paper
           elevation={12}
           style={{
-            width: "20vw",
+            width: "50vw",
             height: "20vw",
             backgroundImage: `url('${image_url}')`,
             backgroundSize: "cover",
@@ -66,7 +66,7 @@ const AlbumPage = () => {
           <Fab
             color="primary"
             aria-label="add"
-            sx={{ top: "calc(20vw - 2rem)", left: "calc(20vw - 2rem)" }}
+            sx={{ top: "calc(20vw - 2rem)", left: "calc(50vw - 2rem)" }}
             onClick={changePlaylist}
           >
             <PlayArrow fontSize="large" />
@@ -79,25 +79,27 @@ const AlbumPage = () => {
               pt: 4,
               fontSize: "4em",
               "@media (max-width:600px)": {
-                fontSize: "2rem",
+                fontSize: "1.5rem",
               },
             }}
           >
             {albumDetails?.name}
           </Typography>
-          <Typography variant="h3">
+          <Typography
+            variant="h3"
+            sx={{
+              fontSize: "2rem",
+              "@media (max-width:600px)": {
+                fontSize: "2rem",
+              },
+            }}
+          >
             {albumDetails?.contributingArtists?.primaryArtist === "art.0" ? (
               albumDetails?.artistName
             ) : (
               <Link
                 to={`/artists/${albumDetails?.contributingArtists?.primaryArtist}`}
                 style={{ textDecoration: "none" }}
-                sx={{
-                  fontSize: "4em",
-                  "@media (max-width:600px)": {
-                    fontSize: "1rem",
-                  },
-                }}
               >
                 {albumDetails?.artistName}
               </Link>
