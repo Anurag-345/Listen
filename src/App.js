@@ -15,6 +15,7 @@ import FavouriteListContainer from "./components/FavouriteListContainer";
 import PlaylistContainer from "./components/PlaylistContainer";
 import ResponsiveDrawer from './components/respTopNav';
 
+
 const App = () => {
   const [theme, setTheme] = useState(
     createTheme({
@@ -60,6 +61,7 @@ const App = () => {
                 <Route path="/albums/:album_id" element={<AlbumPage />} />
                 <Route path="/top/songs" element={<TopSongsContainer />} />
                 <Route path="/search/:query" element={<SearchContainer />} />
+
                 <Route
                   path="/favourites"
                   element={<FavouriteListContainer />}
@@ -68,6 +70,7 @@ const App = () => {
               </Routes>
             </Box>
           </Box>
+
           <PlayerContainer />
         </Box>
       </ThemeProvider>

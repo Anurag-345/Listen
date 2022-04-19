@@ -1,0 +1,115 @@
+
+
+.main_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+    height: 420px;
+    color: black;
+    background: transparent;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: medium;
+
+}
+
+.loginbox input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 35px;
+}
+
+.loginbox button {
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: aquamarine;
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    ;
+    -moz-transition: 00.3s;
+    font-size: 18px;
+
+}
+
+.loggedin button {
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: rgb(144, 130, 151);
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    ;
+    -moz-transition: 00.3s;
+    font-size: 18px;
+}
+
+.sign button {
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: rgb(241, 247, 52);
+    color: black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    ;
+    -moz-transition: 00.3s;
+    font-size: 18px;
+}
+
+.loginbox button:hover,
+.loggedin button:hover {
+    cursor: pointer;
+    background: red;
+    color: #000;
+}
+
+.loginbox a {
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: red;
+}
+
+.loginbox a:hover {
+    color: greenyellow;
+}
+
+.show {
+    color: azure;
+    font-size: 10px;
+    position: relative;
+    bottom: 20px;
+}

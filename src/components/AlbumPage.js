@@ -58,10 +58,11 @@ const AlbumPage = () => {
           elevation={12}
           style={{
             width: "50vw",
-            height: "20vw",
+            height: "",
             backgroundImage: `url('${image_url}')`,
             backgroundSize: "cover",
           }}
+          
         >
           <Fab
             color="primary"

@@ -43,17 +43,26 @@ const ArtistPage = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Stack direction="row" spacing={5}>
+      <Stack
+        direction="row"
+        spacing={5}
+        sx={{
+          "@media (max-width:1200px)": {
+            display:'flex',
+            flexDirection:'column'
+          },
+        }}
+      >
         <Paper
           elevation={12}
           sx={{
-            width: "100%",
+            width: "50%",
             height: "50vh",
             backgroundImage: `url('${image_url}')`,
             backgroundSize: "cover",
-            "@media (max-width:600px)": {
-              width: "100%",
-              height: "8em",
+            "@media (max-width:1200px)": {
+              width: "80%",
+              height: "15em",
             },
           }}
         />
@@ -62,8 +71,8 @@ const ArtistPage = () => {
             variant="h2"
             sx={{
               pt: 4,
-              "@media (max-width:600px)": {
-                fontSize: "2rem",
+              "@media (max-width:900px)": {
+                fontSize: "1.5rem",
               },
             }}
           >
