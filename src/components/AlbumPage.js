@@ -53,21 +53,25 @@ const AlbumPage = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
       <Toolbar />
-      <Stack direction="column" spacing={10}>
+      <Stack
+        direction="row"
+        spacing={10}
+        sx={{ display: "flex", flexWrap: "wrap" }}
+      >
         <Paper
           elevation={12}
           style={{
-            width: "50vw",
-            height: "",
+            width: "300px",
+            height: "40vh",
             backgroundImage: `url('${image_url}')`,
             backgroundSize: "cover",
+            
           }}
-          
         >
           <Fab
             color="primary"
             aria-label="add"
-            sx={{ top: "calc(20vw - 2rem)", left: "calc(50vw - 2rem)" }}
+            sx={{ top: "calc(300px - 2rem)", left: "calc(300px - 2rem)" }}
             onClick={changePlaylist}
           >
             <PlayArrow fontSize="large" />
@@ -80,7 +84,7 @@ const AlbumPage = () => {
               pt: 4,
               fontSize: "4em",
               "@media (max-width:600px)": {
-                fontSize: "1.5rem",
+                fontSize: "1rem",
               },
             }}
           >
