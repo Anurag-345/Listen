@@ -25,7 +25,6 @@ would ever be deployed, it will be available on mobile devices.
 The problem's i identified are : 
 
 1. Expensive
-
 If you switch to the paid plan of any music streaming platform you’ll have to
 pay every month irrespective of whether or
 not you’re using the service. At $120 per
@@ -38,7 +37,6 @@ unless you decide to buy tracks from the
 firm.
 
 2. Sound Quality
-
 Weak quality of sound for free users. If you’re a Spotify Free user, you need to note that when
 listening, the sound quality is poor and the rate is 160kbps, whereas the Premium users enjoy
 320kbps of music streaming.
