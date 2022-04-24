@@ -78,8 +78,10 @@ expires, you won’t have access to any of the content you downloaded offline.
     </ul>
 
 # Screenshots 
- 
+ <h2>Home page</h2>
 <img src="./public/screenshots/Screenshot (124).png" alt="babel" />
+ <h2>Home page(Drak mode)</h2>
 <img src="./public/screenshots/Screenshot (125).png" alt="babel" />
+ <h2>Album page </h2>
 <img src="./public/screenshots/Screenshot (126).png" alt="babel" />
 
