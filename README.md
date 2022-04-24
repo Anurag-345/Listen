@@ -79,8 +79,7 @@ expires, you won’t have access to any of the content you downloaded offline.
 
 # Screenshots 
  
-<img src="./src/logo.png" alt="babel" />
-<img src="./src/logo.png" alt="babel" />
-<img src="./src/logo.png" alt="babel" />
-<img src="./src/logo.png" alt="babel" />
-<img src="./src/logo.png" alt="babel" />
+<img src="./src/Screenshot(124).jpg" alt="babel" />
+<img src="./src/Screenshot(125).jpg" alt="babel" />
+<img src="./src/Screenshot(126).jpg" alt="babel" />
+
