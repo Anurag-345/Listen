@@ -24,7 +24,7 @@ would ever be deployed, it will be available on mobile devices.
 
 The problem's i identified are : 
 
-1. Expensive
+1. Expensive<br/>
 If you switch to the paid plan of any music streaming platform you’ll have to
 pay every month irrespective of whether or
 not you’re using the service. At $120 per
@@ -36,20 +36,20 @@ which you basically just rent your music
 unless you decide to buy tracks from the
 firm.
 
-2. Sound Quality
+2. Sound Quality<br/>
 Weak quality of sound for free users. If you’re a Spotify Free user, you need to note that when
 listening, the sound quality is poor and the rate is 160kbps, whereas the Premium users enjoy
 320kbps of music streaming.
 
 
-3. Ads
+3. Ads<br/>
 Spotify users have to listen to audio advertisements between their favourite songs and podcast
 shows if they use the free account. Plus, you can’t stream individual songs on demand, and you
 Page 11 of 20
 can skip just 6 tracks every hour. This is an extremely bad experience for users, especially when
 you hear things you don’t like.
 
-4. Limitations
+4. Limitations<br/>
 By using a free account mobile app, you can listen to any songs in any order with unlimited track
 skips as long as they appear on one of the 15 personalized playlists selected by Spotify’s
 machine learning algorithms for you.
