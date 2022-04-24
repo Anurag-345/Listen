@@ -1,7 +1,7 @@
 # Listen
 <img src="./src/logo.png" alt="babel" />
 
-Listen is a digital music, podcast Service that gives you access to millions of songs and other 
+Listen is a digital music, streaming web application that gives you access to millions of songs and other 
 content from creators all over the world.
 
 Basic functions such as playing music are totally free.
