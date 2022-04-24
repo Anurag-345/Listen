@@ -1,5 +1,5 @@
 # Listen
-<img src="./src/logo.png" alt="babel" />
+
 
 Listen is a digital music, streaming web application that gives you access to millions of songs and other 
 content from creators all over the world.
@@ -16,7 +16,7 @@ Basic functions such as playing music are totally free.
 
 • Dark mode
 
-
+<img src="./src/logo.png" alt="babel" />
 
 Listen is available across a range of devices, because it is a web application so we can use Listen 
 in any device having a browser and stable internet connection.
