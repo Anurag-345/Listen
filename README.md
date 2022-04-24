@@ -14,6 +14,9 @@ Basic functions such as playing music are totally free.
 
 • Get Top albums, artists Recommendations.
 
+• Dark mode
+
+
 
 Listen is available across a range of devices, because it is a web application so we can use Listen 
 in any device having a browser and stable internet connection.
