@@ -61,3 +61,16 @@ Premium services, but there’s no way to download one single song. When your su
 expires, you won’t have access to any of the content you downloaded offline.
 
 
+# Technologies used 
+
+<ul>
+        <li>React.js</li>
+        <li>JavaScript</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Redux</li>
+        <li>React-Router</li>
+        <li>Api <a href="https://developer.napster.com/r">developer.napster.com/</a></li>
+        <li>Material UI</li>
+    </ul>
+
