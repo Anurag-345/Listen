@@ -10,7 +10,10 @@ Basic functions such as playing music are totally free.
 
 • Build collections of music and podcasts
 
-• And more!
+• Can create own playlist
+
+• Get Top albums, artists Recommendations.
+
 
 Listen is available across a range of devices, because it is a web application so we can use Listen 
 in any device having a browser and stable internet connection.
